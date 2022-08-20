@@ -1,0 +1,109 @@
+
+.day-expand-section {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(40.7742px);
+    z-index: 10;
+    color: $color-fonts-expand-day;
+
+    &__main{
+        margin: 74px 0px 74px 0px;
+        width: 70%;
+        position: absolute;
+        left: 12%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__left{
+        width: 41%;
+        display: flex;
+        flex-direction: column;
+        gap: 4.6rem;
+
+        &-zone {
+
+            &-txt{
+                font-size: $font-size-expand-description;
+                line-height: $line-height-expand-description;
+                font-weight: $font-weight-expand-description;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
+
+            &-location{
+                font-size: $font-size-expand-num-zone;
+                line-height: $line-height-expand-num-zone;
+                font-weight: $font-weight-expand-num-zone;
+            }
+        }
+
+        &-year {
+
+            &-txt{
+                font-size: $font-size-expand-description;
+                line-height: $line-height-expand-description;
+                font-weight: $font-weight-expand-description;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
+
+            &-day{
+                font-size: $font-size-expand-num-zone;
+                line-height: $line-height-expand-num-zone;
+                font-weight: $font-weight-expand-num-zone;
+            }
+        }
+    }
+
+    &__center{
+        margin: 0px 94px 0px 147px;
+        width: 1px;
+        background: #303030;
+        mix-blend-mode: normal;
+        opacity: 0.25;
+    }
+
+    &__right{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 4.6rem;
+
+        &-day-week {
+
+            &-txt{
+                font-size: $font-size-expand-description;
+                line-height: $line-height-expand-description;
+                font-weight: $font-weight-expand-description;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
+
+            &-day{
+                font-size: $font-size-expand-num-zone;
+                line-height: $line-height-expand-num-zone;
+                font-weight: $font-weight-expand-num-zone;
+            }
+        }
+
+        &-week-number {
+
+            &-txt{
+                font-size: $font-size-expand-description;
+                line-height: $line-height-expand-description;
+                font-weight: $font-weight-expand-description;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
+
+            &-week{
+                font-size: $font-size-expand-num-zone;
+                line-height: $line-height-expand-num-zone;
+                font-weight: $font-weight-expand-num-zone;
+            }
+        }
+    }
+}

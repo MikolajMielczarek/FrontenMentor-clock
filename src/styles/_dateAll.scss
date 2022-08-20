@@ -1,0 +1,130 @@
+.time-section {
+    z-index: 10;
+    position: relative;
+    top: 2%;
+    left: 12%;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    //for while later remove
+    color: $color-fonts-all;
+
+    &__greeting{
+        margin-bottom: 1.2rem;
+        display: flex;
+        gap: 1.6rem;
+        font-size: $font-size-greetings;
+        line-height: $line-height-greetings;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        &-img-container{
+
+            &-img{
+
+            }
+        }
+
+        &-hello-container{
+
+            &-hello{
+
+            }
+        }
+    }
+
+    &__time{
+        display: flex;
+        align-items: flex-end;
+        gap: 11px;
+
+        &-current-container{
+            line-height: $line-height-actual-time;
+
+            &-current{
+                font-size: $font-size-actual-time;
+                letter-spacing: -5px;
+            }
+        }
+
+        &-bst-container{
+            font-size: $font-size-bst;
+            line-height: $line-height-bst;
+            text-transform: uppercase;
+            font-weight: $font-weight-bst;
+            padding-bottom: 27px;
+
+            &-bst{
+
+            }
+        }
+
+    }
+
+    &__location-and-btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__location{
+        display: flex;
+        font-size: $font-size-city-and-country;
+        line-height: $line-height-city-and-country;
+        letter-spacing: 4.8px;
+        text-transform: uppercase;
+        &-city{
+
+        }
+
+        &-country{
+
+        }
+
+    }
+
+    &__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 28px;
+        background: $color-bgc-btn-txt;
+        width:146px;
+        height: 56px;
+
+        &-paragraph{
+            text-align: center;
+            width: 63px;
+            height: 28px;
+            margin: 15px 13px 13px 21px;
+            font-size: $font-size-btn;
+            font-weight: $font-weight-btn;
+            line-height: $line-height-btn;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: $color-fonts-btn-normal;
+            opacity:0.5;
+        }
+
+        &-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            margin: 8px 9px 8px 0px;
+            background: $color-bgc-btn-normal;
+            border: none;
+            border-radius: 28px;
+
+
+            &-img{
+                display: flex;
+                width: 12px;
+            }
+        }
+
+    }
+
+
+}

@@ -1,0 +1,39 @@
+.quote-section{
+    z-index: 10;
+    position: relative;
+    top:7%;
+    left: 12%;
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    gap:16px;
+    line-height: $line-height-quotes;
+
+    &__quote-container{
+        display: flex;
+        flex-direction: column;
+        gap:13px;
+        color: $color-fonts-all;
+        font-size: $font-size-quotes;
+        &-quote{
+            font-weight: $font-weight-quotes;
+        }
+        &-author{
+            font-weight: $font-weight-author;
+        }
+    }
+
+    &__change-container{
+        padding-top: 0.5rem;
+        &-btn{
+            background-color: transparent;
+            border: none;
+            &-img{
+
+            }
+
+        }
+
+    }
+}
