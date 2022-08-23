@@ -17,8 +17,6 @@ export default function Quote(props) {
 
   const change = props.display;
 
-  console.log(change)
-
   return (
   <>
     <section className="container-page__quote quote-section" style={(!change && {top:'7%'}) || (change && {top:'-500%'})}>

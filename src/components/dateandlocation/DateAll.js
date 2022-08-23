@@ -2,7 +2,6 @@ import { useFetchForTime } from "../../hooks/useFetchForTime";
 import { useFetch } from "../../hooks/useFetch";
 import { useState } from "react";
 
-
 //jpg and svg
 import sunIcon from '../../assets/desktop/icon-sun.svg';
 import moonIcon from '../../assets/desktop/icon-moon.svg';
@@ -11,8 +10,9 @@ import lessBtn from '../../assets/desktop/icon-arrow-up.svg';
 import daytime from '../../assets/desktop/bg-image-daytime.jpg';
 import nighttime from '../../assets/desktop/bg-image-nighttime.jpg';
 
-
 export default function DateAll(props) {
+
+  const [isHover, setIsHover] = useState(false)
 
   const [change, setChange] =useState(false)
 
@@ -96,6 +96,25 @@ if(img === '/static/media/icon-sun.cb7a2aac3be7bf88b4cf17bd97d62fd2.svg'){
   props.changeBgc(imgBgc)
 }
 
+const handleClickBtn = () => {
+  setIsHover(false)
+  if(change === false){
+    setChange(true)
+    props.changeDisplay(true)
+  } else {
+    setChange(false)
+    props.changeDisplay(false)
+  }
+}
+
+const handleMouseEnter = () => {
+  setIsHover(true)
+}
+
+const handleMouseLeave = () => {
+  setIsHover(false)
+}
+
   return (
   <>
 
@@ -149,30 +168,28 @@ if(img === '/static/media/icon-sun.cb7a2aac3be7bf88b4cf17bd97d62fd2.svg'){
           {zone && <p className="time-section__location-country">{zone.country_code}</p>}
 
         </div>
+        
+        <div className="time-section__button"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}>
 
-        <div className="time-section__button">
-          
-          {!change && <p className="time-section__button-paragraph">
+          {!change && <p className="time-section__button-paragraph"
+            style={(!isHover && {color:'rgba(0, 0, 0, 1)'}) || (isHover && {color:'rgba(153, 153, 153, 1)'})}>
               more
           </p>}
-          {change && <p className="time-section__button-paragraph">
+          {change && <p className="time-section__button-paragraph"
+          style={(!isHover && {color:'rgba(0, 0, 0, 1)'}) || (isHover && {color:'rgba(153, 153, 153, 1)'})}>
               less
           </p>}
 
           <button className="time-section__button-btn"
+            style={(!isHover && {background:'rgb(48, 48, 48)'}) || (isHover && {background:'rgba(153, 153, 153, 1)'})}
             onClick={() => {
-              if(change === false){
-                setChange(true)
-                props.changeDisplay(true)
-              } else {
-                setChange(false)
-                props.changeDisplay(false)
-              }
-              
+              handleClickBtn()
             }}>
 
             {!change && <img className={`"time-section__button-btn-img"`} src={moreBtn} alt="arrow down icon" />}
-            {change &&<img className={`"time-section__button-btn-img"`} src={lessBtn} alt="arrow up icon" />}
+            {change && <img className={`"time-section__button-btn-img"`} src={lessBtn} alt="arrow up icon" />}
 
           </button>
 

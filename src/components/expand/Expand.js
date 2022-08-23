@@ -12,7 +12,7 @@ export default function Expand(props) {
   return (
 
     <section className="container-page__expand day-expand-section"
-        style={(!change && {top:'100%'}) || (change && {top:'-50%'})}>
+        style={(!change && {top:'-250%'}) || (change && {top:'-50%'})}>
 
         <div className="day-expand-section__main">
 

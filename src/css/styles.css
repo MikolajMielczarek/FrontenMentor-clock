@@ -27,7 +27,6 @@ button {
   max-width: 1440px;
   max-height: 800px;
   background: #000000;
-  mix-blend-mode: normal;
   opacity: 0.4;
   z-index: 10;
 }
@@ -40,7 +39,6 @@ button {
   height: 100vw;
   max-width: 1440px;
   max-height: 800px;
-  mix-blend-mode: normal;
 }
 
 .container-page {
@@ -95,6 +93,13 @@ button {
   background-color: transparent;
   border: none;
 }
+.quote-section__change-container-btn-img {
+  opacity: 0.5;
+}
+.quote-section__change-container-btn-img:hover {
+  opacity: 1;
+}
+
 .time-section {
   z-index: 10;
   position: relative;
@@ -206,7 +211,7 @@ button {
   width: 40px;
   height: 40px;
   margin: 8px 9px 8px 0px;
-  background: #303030;
+  background: rgb(48, 48, 48);
   border: none;
   border-radius: 28px;
 }
@@ -315,4 +320,15 @@ button {
   font-size: 5.6rem;
   line-height: 6.8rem;
   font-weight: 700;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/*
+ Custom, iPhone Retina  
+@media only screen and (max-width : 320px) {
+
+}
+*//*# sourceMappingURL=styles.css.map */

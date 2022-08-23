@@ -1,3 +1,4 @@
+
 .bgc-color{
     position: absolute;
     top:-5px;
@@ -7,7 +8,7 @@
     max-width: 1440px;
     max-height: 800px;
     background: #000000;
-    mix-blend-mode: normal;
+    //mix-blend-mode: normal;
     opacity: 0.4;
     z-index: 10;
 }
@@ -20,7 +21,7 @@
     height: 100vw;
     max-width: 1440px;
     max-height: 800px;
-    mix-blend-mode: normal;
+    //mix-blend-mode: normal;
 }
 
 .container-page{

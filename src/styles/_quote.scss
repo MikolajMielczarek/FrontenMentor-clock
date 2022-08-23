@@ -26,13 +26,19 @@
 
     &__change-container{
         padding-top: 0.5rem;
+
+        
         &-btn{
             background-color: transparent;
             border: none;
-            &-img{
 
+            &-img{
+                opacity: 0.5;
             }
 
+            &-img:hover{
+                opacity: 1.0;
+            }
         }
 
     }
