@@ -1,6 +1,7 @@
 import { useFetchForTime } from "../../hooks/useFetchForTime";
 import { useFetch } from "../../hooks/useFetch";
 import { useState } from "react";
+import { useMediaPredicate } from "react-media-hook";
 
 //jpg and svg
 import sunIcon from '../../assets/desktop/icon-sun.svg';
@@ -9,12 +10,21 @@ import moreBtn from '../../assets/desktop/icon-arrow-down.svg';
 import lessBtn from '../../assets/desktop/icon-arrow-up.svg';
 import daytime from '../../assets/desktop/bg-image-daytime.jpg';
 import nighttime from '../../assets/desktop/bg-image-nighttime.jpg';
+import daytimeTablet from '../../assets/tablet/bg-image-daytime.jpg';
+import nighttimeTablet from '../../assets/tablet/bg-image-nighttime.jpg';
+import daytimeMobile from '../../assets/mobile/bg-image-daytime.jpg';
+import nighttimeMobile from '../../assets/mobile/bg-image-nighttime.jpg';
+
 
 export default function DateAll(props) {
 
+  const maxWidth480 = useMediaPredicate("(max-width: 480px)")
+  const maxWidth768 = useMediaPredicate("(max-width: 768px)") 
+
+
   const [isHover, setIsHover] = useState(false)
 
-  const [change, setChange] =useState(false)
+  const [change, setChange] = useState(false)
 
   const urlTime = "http://worldtimeapi.org/api/ip/"
   const {data: times} = useFetchForTime(urlTime)
@@ -89,10 +99,24 @@ const {data: zone} = useFetch(urlWithIp);
 let imgBgc = ''
 
 if(img === '/static/media/icon-sun.cb7a2aac3be7bf88b4cf17bd97d62fd2.svg'){
-  imgBgc = daytime
+  if(maxWidth480 && maxWidth768){
+    imgBgc = daytimeMobile
+  }else if(!maxWidth480 && maxWidth768){
+    imgBgc = daytimeTablet
+  }else{
+    imgBgc = daytime
+  }
+
   props.changeBgc(imgBgc)
 }else if(img === '/static/media/icon-moon.83b9f0dbe53bfaab2e1c6dc344545e9c.svg'){
-  imgBgc = nighttime
+  if(maxWidth480 && maxWidth768){
+    imgBgc = nighttimeMobile
+  }else if(!maxWidth480 && maxWidth768){
+    imgBgc = nighttimeTablet
+  }else{
+    imgBgc = nighttime
+  }
+
   props.changeBgc(imgBgc)
 }
 
@@ -115,11 +139,26 @@ const handleMouseLeave = () => {
   setIsHover(false)
 }
 
+let topStart = ''
+let topAfter = ''
+
+if(maxWidth480){
+  topStart = '4%'
+  topAfter = '-38%'
+}else if(!maxWidth480 && maxWidth768){
+  topStart = '2%'
+  topAfter = '-38%'
+}else{
+  topStart = '2%'
+  topAfter = '-42%'
+}
+
+
   return (
   <>
 
     <section className="container-page__time time-section"
-      style={(!change && {top:'2%'}) || (change && {top:'-42%'})}>
+      style={(!change && {top:`${topStart}`}) || (change && {top:`${topAfter}`})}>
 
       <div className="time-section__greeting">
                   

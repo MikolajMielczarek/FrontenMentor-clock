@@ -1,31 +1,349 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 
+    .quote-section{
+        width: 62%;
+    }
+    .bgc-img{
+        background-position: 43% 0%;
+    }
+
+    .time-section__greeting-hello-container-hello{
+        font-size: 1.8rem;
+    }
+
+    .time-section__time-current-container-current{
+        font-size: 17.5rem;
+    }
+
+    .time-section__time-bst-container-bst{
+        font-size: 3.2rem;
+    }
+
+    .time-section__location-city{
+        font-size: 1.8rem;
+    }
+
+    .time-section__location-country{
+        font-size: 1.8rem;
+    }
+
+    .day-expand-section__left-zone-location {
+        font-size: 4.0rem;
+    }
+    .day-expand-section__left-year-day{
+        font-size: 4.0rem;
+    }
+    .day-expand-section__right-day-week-day{
+        font-size: 4.0rem;
+    }
+    .day-expand-section__right-week-number-week{
+        font-size: 4.0rem;
+    }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 
+    .quote-section{
+        width: 72%;
+    }
+
+    .day-expand-section{
+        &__main{
+            width: 85%;
+        }
+
+        &__right{
+            width: 35%;
+        }
+    }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 
+    .bgc-img{
+        background-position: 0;
+    }
+
+    .quote-section{
+        left:8%;
+    }
+
+    .time-section {
+        width: 90%;
+        left: 8%;
+        &__location-and-btn{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap:80px;
+        }
+    }
+    
+    .day-expand-section{
+
+        height: 44%;
+
+        &__main{
+            margin: 119px 0px 119px 0px;
+
+            width: 90%;
+            left: 8%;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+
+        &__left{
+            width: 60%;
+        }
+
+        &__right{
+            width: 40%;
+        }
+    
+        &__center{
+            display: none;
+        }
+    }
 }
+
+
+/*change mostly for font size*/
+@media only screen and (max-width : 610px) {
+
+    .quote-section{
+        //width: 62%;
+        &__quote-container{
+            font-size: 1.2rem;
+            line-height: 2.2rem;
+        }
+    }
+    .bgc-img{
+        //background-position: 43% 0%;
+    }
+
+    .time-section {
+
+       
+        &__time-bst-container{
+            padding-bottom: 2px;
+        }
+        
+        &__location-and-btn{
+            gap:40px;
+        }
+
+        &__button{
+            width:115px;
+            height: 39px;
+    
+            &-paragraph{
+                width: 47px;
+                height: 14px;
+                margin: 13px 15px 12px 17px;
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+                letter-spacing: 3.75px;
+            }
+    
+            &-btn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 32px;
+                height: 32px;
+                margin: 3px 4px 4px 0px;
+                border-radius: 28px;
+    
+                &-img{
+                    display: flex;
+                    width: 12px;
+                }
+            }
+    
+        }
+    }
+
+    .time-section__greeting-hello-container-hello{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .time-section__time-current-container-current{
+        font-size: 10rem;
+        line-height: 10rem;
+    }
+
+    .time-section__time-bst-container-bst{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .time-section__location-city{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .time-section__location-country{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .day-expand-section__left-zone-location {
+        font-size: 4.0rem;
+    }
+    .day-expand-section__left-year-day{
+        font-size: 4.0rem;
+    }
+    .day-expand-section__right-day-week-day{
+        font-size: 4.0rem;
+    }
+    .day-expand-section__right-week-number-week{
+        font-size: 4.0rem;
+    }
+}
+
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
 
+    .bgc-color{
+        min-width: 320px;
+    }
+    
+    .bgc-img{
+        min-width: 320px;
+    }
+    
+    .container-page{
+        min-width: 320px;
+    }
+
+    .quote-section{
+        width: 80%;
+    }
+
+    .time-section{
+        height: 46%;
+
+        &__time{
+            gap: 7px;
+            &-bst-container{
+            padding-bottom: 4px;
+        }}
+    }
+
+    .day-expand-section {
+        height: 38%;
+
+        &__main{
+            margin: 48px 0px 48px 0px;
+            width: 85%;
+            left: 7%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+        }
+    
+        &__left{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+    
+            &-zone {
+                width: 100%;
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+                &-txt{
+                    font-size: 1rem;
+                    letter-spacing: 2px;
+                    line-height: 2.8rem;
+                }
+    
+                &-location{
+                    font-size: 2rem;
+                    line-height: 2.8rem;
+                }
+            }
+    
+            &-year {
+                width: 100%;
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+                &-txt{
+                    font-size: 1rem;
+                    letter-spacing: 2px;
+                    line-height: 2.8rem;
+                }
+    
+                &-day{
+                    font-size: 2rem;
+                    line-height: 2.8rem;
+                }
+            }
+        }
+    
+        &__right{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+    
+            &-day-week {
+                width: 100%;
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+                &-txt{
+                    font-size: 1rem;
+                    letter-spacing: 2px;
+                    line-height: 2.8rem;
+                }
+    
+                &-day{
+                    font-size: 2rem;
+                    line-height: 2.8rem;
+                }
+            }
+    
+            &-week-number {
+                width: 100%;
+                display: flex;
+                justify-content:space-between;
+                align-items: center;
+                &-txt{
+                    font-size: 1rem;
+                    letter-spacing: 2px;
+                    line-height: 2.8rem;
+                }
+    
+                &-week{
+                    font-size: 2rem;
+                    line-height: 2.8rem;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
-
-
-/*
- Custom, iPhone Retina  
-@media only screen and (max-width : 320px) {
-        
-}
-*/
-
 
 
 

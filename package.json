@@ -10,6 +10,7 @@
     "react": "^18.2.0",
     "react-date-object": "^2.1.5",
     "react-dom": "^18.2.0",
+    "react-media-hook": "^0.4.9",
     "react-scripts": "5.0.1",
     "sass": "^1.54.3",
     "web-vitals": "^2.1.4"

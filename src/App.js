@@ -13,7 +13,6 @@ function App() {
 const [imgBgc, setImgBgc] = useState(daytime)
 
 const [display, setDispaly] = useState(false)
-const [display2, setDispaly2] = useState(false)
 
 const changeBgc = (imgBgc) => {
   setImgBgc(imgBgc)
@@ -30,28 +29,23 @@ const myStyle = {
   top:(!display && '-5px') || (display && '-75px')
 }
 
-
   return (
     <>
     
-      <div className='bgc-color'>
-      </div>
-
+      <div className='bgc-color'></div>
+      
       <div className='bgc-img'
-        style = {myStyle} >
-      </div>
+          style = {myStyle} ></div>
 
-      <div className="container-page" 
-        >
+      <div className="container-page">
 
         <Quote display = {display} />
         
         <DateAll changeBgc={changeBgc} changeDisplay = {changeDisplay}/>
 
         <Expand display = {display} />
-        
+            
       </div>
-      
     </>
   );
 }
